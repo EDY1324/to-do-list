@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #777474;
     margin: 0;
     padding: 0;
     display: flex;
@@ -46,7 +46,7 @@ body {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #0a9411;
   }
   
   ul {
@@ -74,7 +74,7 @@ body {
   }
   
   li button:hover {
-    background-color: #e53935;
+    background-color: #ac0a0a;
   }
   
   li input {
