@@ -21,6 +21,12 @@ body {
   h1 {
     color: #333;
   }
+
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }  
   
   input {
     padding: 10px;

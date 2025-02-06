@@ -18,6 +18,9 @@ function renderTasks() {
   todoList.forEach((task, index) => {
     const li = document.createElement("li");
 
+    const taskNumber = document.createElement("span");
+    taskNumber.innerText = `${index + 1}. `;
+
     const taskInput = document.createElement("input");
     taskInput.type = "text";
     taskInput.value = task;
@@ -25,13 +28,14 @@ function renderTasks() {
     taskInput.addEventListener("change", () => updateTask(index, taskInput.value));
     
     const editButton = document.createElement("button");
-    editButton.innerText = "Edit";
+    editButton.innerText = "✏️";
     editButton.onclick = () => enableEditing(index, taskInput);
 
     const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
+    deleteButton.innerText = "X";
     deleteButton.onclick = () => deleteTask(index);
 
+    li.appendChild(taskNumber);
     li.appendChild(taskInput);
     li.appendChild(editButton);
     li.appendChild(deleteButton);
@@ -52,6 +56,6 @@ function updateTask(index, updatedTask) {
 }
 
 function deleteTask(index) {
-  todoList.splice(index, 1);
-  renderTasks();
+    todoList.splice(index, 1);
+    renderTasks();
 }
