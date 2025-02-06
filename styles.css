@@ -88,3 +88,10 @@ body {
     background-color: #f1f1f1;
   }
   
+  li.dragging {
+    opacity: 0.5;
+  }
+  
+  li.drag-over {
+    border-top: 2px solid blue;
+  }
