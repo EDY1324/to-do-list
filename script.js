@@ -12,7 +12,7 @@ function addTask() {
 
 function renderTasks() {
   const taskListElement = document.getElementById("taskList");
-  taskListElement.innerHTML = '';  // Kosongkan daftar sebelum merender ulang
+  taskListElement.innerHTML = ''; 
 
   todoList.forEach((task, index) => {
     const li = document.createElement("li");
