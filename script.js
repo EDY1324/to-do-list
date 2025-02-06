@@ -3,17 +3,16 @@ let todoList = [];
 function addTask() {
   const taskInput = document.getElementById("taskInput");
   const task = taskInput.value.trim();
-  
+
   if (task) {
     todoList.push(task);
     taskInput.value = '';
     renderTasks();
-  }
 }
 
 function renderTasks() {
   const taskListElement = document.getElementById("taskList");
-  taskListElement.innerHTML = ''; 
+  taskListElement.innerHTML = '';  // Kosongkan daftar sebelum merender ulang
 
   todoList.forEach((task, index) => {
     const li = document.createElement("li");
@@ -102,4 +101,5 @@ function updateTask(index, updatedTask) {
 function deleteTask(index) {
   todoList.splice(index, 1);
   renderTasks();
+}
 }
